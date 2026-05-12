@@ -14,6 +14,8 @@ public class HomePage extends PageObject{
 		// TODO Auto-generated constructor stub
 	}
 
+	
+	
 
 
 	@FindBy(xpath = "//img[@class='logo-main scale-with-grid']")
