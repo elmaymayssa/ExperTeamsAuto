@@ -1,4 +1,4 @@
-package com.example.ExperteamPage.com;
+package com.example.ExperteamPage.com.pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
