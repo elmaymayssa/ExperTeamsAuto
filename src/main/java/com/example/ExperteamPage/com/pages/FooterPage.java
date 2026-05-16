@@ -38,6 +38,11 @@ public class FooterPage extends PageObject{
 
     @FindBy(xpath = "widget_mfn_menu-28")
     private WebElement developpement;
+    
+    @FindBy(xpath = "//a[starts-with(@href,'https://www.expertunisie.com/')]")
+    private List<WebElement> links;
+
+    
 
     // ================= METHODS =================
 
@@ -57,7 +62,7 @@ public class FooterPage extends PageObject{
     }
 
 	public boolean hasLinks() {
-		// TODO Auto-generated method stub
-		return false;
+		
+		return (links.size()==100)? true:false;
 	}
 }

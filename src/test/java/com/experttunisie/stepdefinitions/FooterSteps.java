@@ -49,9 +49,13 @@ public class FooterSteps extends BasePage {
 
     @Then("footer links should be displayed")
     public void footer_links_should_be_displayed() {
+    	   footerPage.log.severe("Footer Has Links : OK");
        Assert.assertTrue(footerPage.hasLinks());
        footerPage.log.info("Footer Has Links : OK");
+    
     }
+    
+    
 
     @After
     public void tearDown() {

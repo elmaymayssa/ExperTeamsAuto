@@ -52,10 +52,35 @@ public class HomePage extends PageObject {
 
     @FindBy(xpath = "//p[@class='tags']/a")
     private List<WebElement> tags;
+    
+    @FindBy(xpath = "//div[@id='Action_bar']//i[@class='icon-facebook']")
+    private WebElement facebook;
+    
+    @FindBy(xpath = "//a[@title='YouTube']")
+    private WebElement youtube;
+    
+  
+    
 
     // ===================== ACTIONS =====================
 
-    public void openWebsite() {
+    public WebElement getFacebook() {
+		return facebook;
+	}
+
+	public void setFacebook(WebElement facebook) {
+		this.facebook = facebook;
+	}
+
+	public WebElement getYoutube() {
+		return youtube;
+	}
+
+	public void setYoutube(WebElement youtube) {
+		this.youtube = youtube;
+	}
+
+	public void openWebsite() {
         driver.get("https://www.expertunisie.com/");
     }
 

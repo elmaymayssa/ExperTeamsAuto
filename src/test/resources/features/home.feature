@@ -7,3 +7,7 @@ Feature: Expert Tunisie Home Page
     When user enters Expert Tunisie URL
 
     Then Expert Tunisie home page should be displayed
+    
+    When user clics social media
+    
+    Then social media pages are displayed correctly

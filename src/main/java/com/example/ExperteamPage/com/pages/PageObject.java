@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.util.Date;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
 import java.util.logging.Level;
@@ -289,6 +290,32 @@ public class PageObject {
 			//driver.switchTo().window(window);
 			
 		
+		 }
+		 
+		 public Set<String> getCurrentUrlFromWindowHanldes()
+		 {
+			 
+			 Set<String> currentUrl= new HashSet<String>();
+			 
+		
+			 
+			 Set<String> windows=driver.getWindowHandles();
+			 
+			 for (String window : windows) {
+				 
+				 driver.switchTo().window(window);
+				 
+				 currentUrl.add(driver.getCurrentUrl());  
+				
+			  }
+			 
+		return currentUrl;
+		 }
+		 
+		public boolean isCorrectCurrentUrl(Set<String> urls, String  url) {
+			 
+			 return urls.contains(url)		;
+			 
 		 }
 		 
 		
