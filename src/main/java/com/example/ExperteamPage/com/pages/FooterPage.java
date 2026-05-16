@@ -1,24 +1,18 @@
 package com.example.ExperteamPage.com.pages;
 
-import java.time.Duration;
 import java.util.List;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class FooterPage {
+public class FooterPage extends PageObject{
 
-    private WebDriver driver;
-    private WebDriverWait wait;
-
+   
     public FooterPage(WebDriver driver) {
-        this.driver = driver;
-        this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        PageFactory.initElements(driver, this);
+       super(driver);
+        
     }
 
     // ================= FOOTER ROOT =================
@@ -48,7 +42,7 @@ public class FooterPage {
     // ================= METHODS =================
 
     public boolean isFooterDisplayed() {
-        wait.until(ExpectedConditions.visibilityOf(footer));
+       wait.until(ExpectedConditions.visibilityOf(footer));
         return footer.isDisplayed();
     }
 
@@ -61,4 +55,9 @@ public class FooterPage {
         return sections.stream()
                 .anyMatch(el -> el.getText().trim().contains(name));
     }
+
+	public boolean hasLinks() {
+		// TODO Auto-generated method stub
+		return false;
+	}
 }
