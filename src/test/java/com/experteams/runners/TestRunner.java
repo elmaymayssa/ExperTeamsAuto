@@ -10,20 +10,19 @@ import io.cucumber.testng.CucumberOptions;
         glue = "com.experttunisie.stepdefinitions",
 
         
-        tags = "@Footer",
+        //tags = "@Footer",
 
         
         plugin = {
                 "pretty",
                 "html:target/cucumber-report.html",
-                "json:target/cucumber.json"
+                "json:target/cucumber.json",
+                "junit:target/cucumber.xml"
         },
 
-        
         monochrome = true,
 
-        
-        publish = true
+        publish = false
 )
 
 public class TestRunner
